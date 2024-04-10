@@ -8,6 +8,7 @@ dnf_packages:
   - dconf-editor # GUI for gnome configs
   - cmake
   - gcc
+  - libluv # Required for some versions of neovim
   - neovim
   - python3-neovim
   - zsh
