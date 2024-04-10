@@ -5,15 +5,31 @@
     path: ~/.cargo/bin/rustc
   register: stat_result
 
-- name: Install rustup
-  dnf:
-    name: rustup
-    state: present
-  become: true
+- name: Download rustup
+  get_url:
+    url: https://sh.rustup.rs
+    dest: /tmp/sh.rustup.rs
+    mode: "0755"
+    force: true
   when: not stat_result.stat.exists
 
 - name: Run rustup-init with defaults
   shell:
-    cmd: rustup-init -y
-  become: true
+    cmd: /tmp/sh.rustup.rs -y
   when: not stat_result.stat.exists
+
+- name: Check if cargo env is set in .zshrc
+  lineinfile:
+    state: absent
+    path: "~/.zshrc"
+    regexp: "[ -f ~/.cargo/env ] && source $HOME/.cargo/env"
+  check_mode: true
+  # changed_when: false # This just makes things look prettier in the logs
+  register: check_cargo
+
+- name: Append cargo env if undefined
+  lineinfile:
+    state: present
+    path: "~/.zshrc"
+    line: "[ -f ~/.cargo/env ] && source $HOME/.cargo/env"
+  when: check_cargo.found == 0
