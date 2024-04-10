@@ -1,0 +1,21 @@
+install_dnf_packages: true
+dnf_packages:
+  - git
+  - openssl
+  - python3-pip
+  - curl
+  - wget
+  - dconf-editor # GUI for gnome configs
+  - cmake
+  - gcc
+  - neovim
+  - python3-neovim
+  - zsh
+  - xclip
+  - dnf-plugins-core # Required for Docker
+  - golang
+  - rustup
+  - kitty # Terminal emulator
+  - dotnet-sdk-8.0
+  - fedora-workstation-repositories # Required for google-chrome
+  - flatpak

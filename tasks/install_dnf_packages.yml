@@ -1,0 +1,13 @@
+---
+- name: Ensure Python is installed # Probably not needed
+  become: true
+  dnf:
+    name: python3
+    state: latest
+
+- name: Install dnf packages
+  dnf:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{dnf_packages}}"

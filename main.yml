@@ -1,0 +1,13 @@
+---
+- name: Fedora dev workstation setup
+  hosts: localhost
+  connection: local
+
+  pre_tasks:
+    - name: Include config vars
+      include_vars: vars/default.config.yml
+
+  tasks:
+    - name: Install all dnf packages
+      include_tasks: tasks/install_dnf_packages.yml
+      when: install_dnf_packages
