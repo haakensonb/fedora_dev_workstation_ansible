@@ -19,3 +19,7 @@
     - name: Install and setup kitty
       include_tasks: tasks/kitty.yml
       when: install_kitty
+
+    - name: Install and setup Rust
+      include_tasks: tasks/rust.yml
+      when: install_rust

@@ -17,7 +17,6 @@ dnf_packages:
   - xclip
   - dnf-plugins-core # Required for Docker
   - golang
-  - rustup
   - dotnet-sdk-8.0
   - fedora-workstation-repositories # Required for google-chrome
   - flatpak
@@ -27,3 +26,5 @@ install_zsh: true
 zsh_default_shell: true
 
 install_kitty: true
+
+install_rust: true

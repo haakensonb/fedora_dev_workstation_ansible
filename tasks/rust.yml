@@ -1,0 +1,19 @@
+---
+- name: Check if rust compiler is installed
+  stat:
+    # Assume default install location
+    path: ~/.cargo/bin/rustc
+  register: stat_result
+
+- name: Install rustup
+  dnf:
+    name: rustup
+    state: present
+  become: true
+  when: not stat_result.stat.exists
+
+- name: Run rustup-init with defaults
+  shell:
+    cmd: rustup-init -y
+  become: true
+  when: not stat_result.stat.exists
