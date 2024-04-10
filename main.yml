@@ -23,3 +23,7 @@
     - name: Install and setup Rust
       include_tasks: tasks/rust.yml
       when: install_rust
+
+    - name: Install and setup Docker
+      include_tasks: tasks/docker.yml
+      when: install_docker

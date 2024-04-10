@@ -28,3 +28,5 @@ zsh_default_shell: true
 install_kitty: true
 
 install_rust: true
+
+install_docker: true
