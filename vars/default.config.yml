@@ -5,11 +5,13 @@ dnf_packages:
   - python3-pip
   - curl
   - wget
+  - ripgrep
+  - unzip
+  - source-foundry-hack-fonts
   - dconf-editor # GUI for gnome configs
   - cmake
   - gcc
   - vim
-  - zsh
   - xclip
   - dnf-plugins-core # Required for Docker
   - golang
@@ -18,3 +20,6 @@ dnf_packages:
   - dotnet-sdk-8.0
   - fedora-workstation-repositories # Required for google-chrome
   - flatpak
+
+install_zsh: true
+zsh_default_shell: true
