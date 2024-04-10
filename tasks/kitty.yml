@@ -1,0 +1,12 @@
+---
+- name: Install kitty
+  dnf:
+    name:
+      - kitty
+      - source-foundry-hack-fonts # Ensure that fonts are installed
+    state: present
+  become: true
+
+- name: Copy kitty.conf
+  shell:
+    cmd: cp ./files/kitty.conf ~/.config/kitty/kitty.conf

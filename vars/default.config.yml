@@ -16,10 +16,11 @@ dnf_packages:
   - dnf-plugins-core # Required for Docker
   - golang
   - rustup
-  - kitty # Terminal emulator
   - dotnet-sdk-8.0
   - fedora-workstation-repositories # Required for google-chrome
   - flatpak
 
 install_zsh: true
 zsh_default_shell: true
+
+install_kitty: true

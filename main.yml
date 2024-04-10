@@ -15,3 +15,7 @@
     - name: Install and setup zsh
       include_tasks: tasks/zsh.yml
       when: install_zsh
+
+    - name: Install and setup kitty
+      include_tasks: tasks/kitty.yml
+      when: install_kitty
