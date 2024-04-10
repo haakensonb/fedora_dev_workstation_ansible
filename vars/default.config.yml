@@ -20,6 +20,7 @@ dnf_packages:
   - dotnet-sdk-8.0
   - fedora-workstation-repositories # Required for google-chrome
   - flatpak
+  - nodejs
 
 install_zsh: true
 zsh_default_shell: true
