@@ -26,5 +26,3 @@ install_zsh: true
 zsh_default_shell: true
 
 install_kitty: true
-
-install_node: true

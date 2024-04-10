@@ -19,7 +19,3 @@
     - name: Install and setup kitty
       include_tasks: tasks/kitty.yml
       when: install_kitty
-
-    - name: Install Node
-      include_tasks: tasks/node.yml
-      when: install_node
