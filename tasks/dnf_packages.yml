@@ -1,10 +1,4 @@
 ---
-- name: Ensure Python is installed # Probably not needed
-  become: true
-  dnf:
-    name: python3
-    state: present
-
 - name: Install dnf packages
   dnf:
     name: "{{ item }}"
