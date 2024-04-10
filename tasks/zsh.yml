@@ -1,0 +1,13 @@
+---
+- name: Install zsh
+  dnf:
+    name: zsh
+    state: present
+  become: true
+
+- name: Set zsh as default
+  user:
+    name: "{{ ansible_facts.user_id}}"
+    shell: /usr/bin/zsh
+  become: true
+  when: zsh_default_shell

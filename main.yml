@@ -11,3 +11,7 @@
     - name: Install all dnf packages
       include_tasks: tasks/install_dnf_packages.yml
       when: install_dnf_packages
+
+    - name: Install and setup zsh
+      include_tasks: tasks/zsh.yml
+      when: install_zsh
