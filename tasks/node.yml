@@ -1,7 +1,25 @@
 ---
-- name: Install nodejs, npm, nvm
+- name: Download and install nvm
   shell:
-    cmd: |
-      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-      nvm install 20
+    cmd: touch ~/.bash_profile && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  become: true
+
+- name: Check if nvm configured for zsh
+  lineinfile:
+    state: absent
+    path: ~/.zshrc
+    regexp: "[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh"
+  check_mode: true
+  register: check
+
+- name: Write nvm config for zsh
+  lineinfile:
+    state: present
+    path: ~/.zshrc
+    line: "[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh"
+  when: check.found == 0
+
+- name: Install node
+  shell:
+    cmd: source ~/.nvm/nvm.sh && nvm install 20
   become: true
