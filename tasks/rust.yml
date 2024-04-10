@@ -33,3 +33,8 @@
     path: "~/.zshrc"
     line: "[ -f ~/.cargo/env ] && source $HOME/.cargo/env"
   when: check_cargo.found == 0
+  register: zshrc_appended
+
+- name: Source .zshrc after rust install
+  shell: source ~/.zshrc
+  when: zshrc_appended
