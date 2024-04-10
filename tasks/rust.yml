@@ -37,4 +37,4 @@
 
 - name: Source .zshrc after rust install
   shell: source ~/.zshrc
-  when: zshrc_appended.found == 0
+  when: zshrc_appended.changed
