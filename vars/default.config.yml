@@ -1,4 +1,5 @@
 install_dnf_packages: true
+# Packages that can be installed from dnf without any extra configuration
 dnf_packages:
   - git
   - openssl
@@ -24,3 +25,5 @@ install_zsh: true
 zsh_default_shell: true
 
 install_kitty: true
+
+install_node: true

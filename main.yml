@@ -9,7 +9,7 @@
 
   tasks:
     - name: Install all dnf packages
-      include_tasks: tasks/install_dnf_packages.yml
+      include_tasks: tasks/dnf_packages.yml
       when: install_dnf_packages
 
     - name: Install and setup zsh
@@ -19,3 +19,7 @@
     - name: Install and setup kitty
       include_tasks: tasks/kitty.yml
       when: install_kitty
+
+    - name: Install Node
+      include_tasks: tasks/node.yml
+      when: install_node
