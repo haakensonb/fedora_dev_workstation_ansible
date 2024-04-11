@@ -10,3 +10,7 @@
 - name: Install spotify flatpak
   shell: sudo flatpak install -y com.spotify.Client
   become: true
+
+- name: Install obsidian flatpak
+  shell: sudo flatpak install -y md.obsidian.Obsidian
+  become: true
