@@ -4,5 +4,5 @@
   become: true
 
 - name: Install discord flatpak
-  shell: sudo flatpak install com.discordapp.Discord
+  shell: sudo flatpak install -y com.discordapp.Discord
   become: true
