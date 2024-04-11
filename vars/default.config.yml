@@ -49,4 +49,5 @@ vscode_extensions:
   - ms-python.debugpy
   - ms-python.mypy-type-checker
 
-install_virtualbox: true
+# Maybe won't work? Vbox not updated for Fedora 39 yet?
+install_virtualbox: false
