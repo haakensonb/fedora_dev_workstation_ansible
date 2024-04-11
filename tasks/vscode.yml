@@ -16,5 +16,6 @@
 
 - name: Install VSCode Extensions
   shell: "code --install-extension {{item}}"
-  become: true
+  # VSCode doesn't want to run as sudo
+  become: false
   with_items: "{{vscode_extensions}}"
