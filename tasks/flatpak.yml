@@ -1,5 +1,5 @@
 ---
-- name: Enable flatpak repo for discord
+- name: Enable flatpak
   shell: sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   become: true
 
