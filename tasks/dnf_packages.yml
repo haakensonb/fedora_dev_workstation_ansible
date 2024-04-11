@@ -5,3 +5,12 @@
     state: present
   become: true
   with_items: "{{dnf_packages}}"
+
+- name: Install third party tools for Google Chrome
+  dnf:
+    - fedora-workstation-repositories
+  become: true
+
+- name: Enable Google Chrome repo and install
+  shell: sudo dnf config-manager --set-enabled google-chrome && sudo dnf install google-chrome-stable
+  become: true

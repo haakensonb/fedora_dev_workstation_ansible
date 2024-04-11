@@ -15,10 +15,8 @@ dnf_packages:
   - gcc
   - vim
   - xclip
-  - dnf-plugins-core # Required for Docker
   - golang
   - dotnet-sdk-8.0
-  - fedora-workstation-repositories # Required for google-chrome
   - flatpak
   - nodejs
 
