@@ -31,3 +31,7 @@
     - name: Install and setup flatpak apps
       include_tasks: tasks/flatpak.yml
       when: install_flatpak_apps
+
+    - name: Install and setup VSCode
+      include_tasks: tasks/vscode.yml
+      when: install_vscode

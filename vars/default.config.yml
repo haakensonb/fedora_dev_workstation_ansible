@@ -30,3 +30,21 @@ install_rust: true
 install_docker: true
 
 install_flatpak_apps: true
+
+install_vscode: true
+vscode_extensions:
+  - rust-lang.rust-analyzer
+  - ms-vscode-remote.remote-containers
+  - dracula-theme.theme-dracula
+  - jdinhlife.gruvbox
+  - vscodevim.vim
+  - ms-dotnettools.vscode-dotnet-runtime
+  - ms-dotnettools.csharp
+  - ms-azuretools.vscode-docker
+  - yzhang.markdown-all-in-one
+  - charliermarsh.ruff
+  - redhat.vscode-yaml
+  - ms-python.vscode-pylance
+  - ms-python.python
+  - ms-python.debugpy
+  - ms-python.mypy-type-checker
