@@ -14,9 +14,8 @@
 
 - name: Import VirtualBox repo
   get_url:
-    src: http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+    url: http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
     dest: /etc/yum.repos.d/virtualbox.repo
-    force: yes
   become: true
 
 - name: Install VirtualBox
