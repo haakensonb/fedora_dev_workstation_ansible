@@ -13,5 +13,5 @@
   become: true
 
 - name: Enable Google Chrome repo and install
-  shell: sudo dnf config-manager --set-enabled google-chrome && sudo dnf install google-chrome-stable
+  shell: sudo dnf config-manager --set-enabled google-chrome && sudo dnf install -y google-chrome-stable
   become: true
