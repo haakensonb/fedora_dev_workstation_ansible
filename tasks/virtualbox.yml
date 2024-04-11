@@ -23,7 +23,7 @@
   become: true
 
 - name: Get VirtualBox version
-  shell: vboxmanage -v | cut -dr -f1
+  shell: vboxmanage -v | awk 'END{print}'
   register: vbox_version_output
 
 - set_fact:

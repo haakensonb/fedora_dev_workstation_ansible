@@ -7,6 +7,7 @@ dnf_packages:
   - python3-pip
   - curl
   - wget
+  - awk
   - ripgrep
   - unzip
   - source-foundry-hack-fonts
@@ -49,4 +50,4 @@ vscode_extensions:
   - ms-python.debugpy
   - ms-python.mypy-type-checker
 
-install_virtualbox: false
+install_virtualbox: true
