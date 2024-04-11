@@ -27,3 +27,7 @@
     - name: Install and setup Docker
       include_tasks: tasks/docker.yml
       when: install_docker
+
+    - name: Install and setup flatpak apps
+      include_tasks: tasks/flatpak.yml
+      when: install_flatpak_apps

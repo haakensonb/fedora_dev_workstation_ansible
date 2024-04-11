@@ -30,3 +30,5 @@ install_kitty: true
 install_rust: true
 
 install_docker: true
+
+install_flatpak_apps: true
