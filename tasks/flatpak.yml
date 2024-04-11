@@ -6,3 +6,7 @@
 - name: Install discord flatpak
   shell: sudo flatpak install -y com.discordapp.Discord
   become: true
+
+- name: Install spotify flatpak
+  shell: sudo flatpak install -y com.spotify.Client
+  become: true
