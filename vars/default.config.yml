@@ -7,7 +7,6 @@ dnf_packages:
   - python3-pip
   - curl
   - wget
-  - awk
   - ripgrep
   - unzip
   - source-foundry-hack-fonts
