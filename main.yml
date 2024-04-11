@@ -8,25 +8,25 @@
       include_vars: vars/default.config.yml
 
   tasks:
-    - name: Install all dnf packages
-      include_tasks: tasks/dnf_packages.yml
-      when: install_dnf_packages
+    # - name: Install all dnf packages
+    #   include_tasks: tasks/dnf_packages.yml
+    #   when: install_dnf_packages
 
-    - name: Install and setup zsh
-      include_tasks: tasks/zsh.yml
-      when: install_zsh
+    # - name: Install and setup zsh
+    #   include_tasks: tasks/zsh.yml
+    #   when: install_zsh
 
-    - name: Install and setup kitty
-      include_tasks: tasks/kitty.yml
-      when: install_kitty
+    # - name: Install and setup kitty
+    #   include_tasks: tasks/kitty.yml
+    #   when: install_kitty
 
-    - name: Install and setup Rust
-      include_tasks: tasks/rust.yml
-      when: install_rust
+    # - name: Install and setup Rust
+    #   include_tasks: tasks/rust.yml
+    #   when: install_rust
 
-    - name: Install and setup Docker
-      include_tasks: tasks/docker.yml
-      when: install_docker
+    # - name: Install and setup Docker
+    #   include_tasks: tasks/docker.yml
+    #   when: install_docker
 
     - name: Install and setup flatpak apps
       include_tasks: tasks/flatpak.yml
