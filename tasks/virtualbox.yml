@@ -14,6 +14,7 @@
     src: ./files/virtualbox.repo
     dest: /etc/yum.repos.d/virtualbox.repo
     force: no
+  become: true
 
 - name: Install VirtualBox
   dnf:
