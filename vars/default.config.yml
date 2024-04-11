@@ -48,3 +48,5 @@ vscode_extensions:
   - ms-python.python
   - ms-python.debugpy
   - ms-python.mypy-type-checker
+
+install_virtualbox: true

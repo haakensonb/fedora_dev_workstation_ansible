@@ -35,3 +35,7 @@
     - name: Install and setup VSCode
       include_tasks: tasks/vscode.yml
       when: install_vscode
+
+    - name: Install and setup VirtualBox
+      include_tasks: tasks/virtualbox.yml
+      when: install_virtualbox

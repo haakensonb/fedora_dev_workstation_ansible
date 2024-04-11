@@ -1,0 +1,41 @@
+---
+- name: Install VirtualBox deps
+  dnf:
+    name:
+      - "@development-tools"
+      - kernel-headers
+      - kernel-devel
+      - dkms
+  become: true
+
+- name: Copy VirtualBox repo conf
+  copy:
+    src: ./files/virtualbox.repo
+    dest: /etc/yum.repos.d/virtualbox.repo
+    force: no
+
+- name: Install VirtualBox
+  dnf:
+    name: VirtualBox-7.0
+  become: true
+
+- name: Get VirtualBox version
+  shell: vboxmanage -v | cut -dr -f1
+  register: vbox_version_output
+
+- set-fact:
+    vbox_version: "{{vbox_version_output.stdout}}"
+
+- name: Download VirtualBox Extension Pack
+  get_url:
+    url: "https://download.virtualbox.org/virtualbox/{{vbox_version}}/Oracle_VM_VirtualBox_Extension_Pack-{{vbox_version}}.vbox-extpack"
+    dest: "/tmp/Oracle_VM_VirtualBox_Extension_Pack-{{vbox_version}}.vbox-extpack"
+  when: vbox_version_output
+
+- name: Install VirtualBox Extension Pack
+  shell: "sudo vboxmanage extpack install -y /tmp/Oracle_VM_VirtualBox_Extension_Pack-{{vbox_version}}.vbox-extpack"
+  become: true
+
+- name: Add user to vboxusers group
+  shell: sudo usermod -a -G vboxusers $USER
+  become: true
