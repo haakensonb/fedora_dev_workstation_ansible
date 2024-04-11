@@ -49,4 +49,4 @@ vscode_extensions:
   - ms-python.debugpy
   - ms-python.mypy-type-checker
 
-install_virtualbox: true
+install_virtualbox: false
