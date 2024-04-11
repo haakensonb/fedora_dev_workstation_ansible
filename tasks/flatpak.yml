@@ -1,4 +1,8 @@
 ---
-- name: Install Discord using flatpak
-  shell: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install discord
+- name: Enable flatpak repo for discord
+  shell: sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  become: true
+
+- name: Install discord flatpak
+  shell: sudo flatpak install discord
   become: true
