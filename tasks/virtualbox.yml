@@ -23,7 +23,7 @@
   shell: vboxmanage -v | cut -dr -f1
   register: vbox_version_output
 
-- set-fact:
+- set_fact:
     vbox_version: "{{vbox_version_output.stdout}}"
 
 - name: Download VirtualBox Extension Pack
