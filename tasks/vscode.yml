@@ -8,7 +8,7 @@
   become: true
 
 - name: Update package cache and install VSCode
-  shell: dnf check-update && sudo dnf install -y code
+  shell: sudo dnf check-update -y && sudo dnf install -y code
   become: true
 
 - name: Install VSCode Extensions
