@@ -11,7 +11,7 @@
   dnf:
     name: code
     state: present
-    update-cache: true
+    update_cache: true
   become: true
 
 - name: Install VSCode Extensions
