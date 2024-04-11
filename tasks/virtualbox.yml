@@ -18,6 +18,7 @@
 - name: Install VirtualBox
   dnf:
     name: VirtualBox-7.0
+    state: present
   become: true
 
 - name: Get VirtualBox version
