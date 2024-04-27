@@ -16,4 +16,4 @@
     force: true
 
 - name: Install media controls
-  shell: cd /tmp && gnome-extensions install extension.zip --force
+  shell: cd /tmp && gnome-extensions install mediacontrols.shell-extension.zip --force
