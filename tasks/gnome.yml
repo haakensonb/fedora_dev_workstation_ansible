@@ -1,0 +1,9 @@
+---
+- name: Download blur-my-shell
+  git:
+    repo: https://github.com/aunetx/blur-my-shell
+    dest: /tmp/blur-my-shell
+    clone: yes
+
+- name: Install blur-my-shell
+  shell: cd /tmp/blur-my-shell && make install
