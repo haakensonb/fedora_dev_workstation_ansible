@@ -7,3 +7,13 @@
 
 - name: Install blur-my-shell
   shell: cd /tmp/blur-my-shell && make install
+
+- name: Download media controls
+  get_url:
+    url: https://github.com/sakithb/media-controls/releases/download/v2.0.1/mediacontrols@cliffniff.github.com.shell-extension.zip
+    dest: /tmp/mediacontrols.shell-extension.zip
+    mode: "0755"
+    force: true
+
+- name: Install media controls
+  shell: cd /tmp && gnome-extensions install extension.zip --force
