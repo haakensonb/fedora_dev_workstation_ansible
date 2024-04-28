@@ -1,14 +1,4 @@
 ---
-- name: Download blur-my-shell
-  get_url:
-    url: https://github.com/aunetx/blur-my-shell/releases/download/v61/blur-my-shell@aunetx.shell-extension.zip
-    dest: /tmp/blur-my-shell.shell-extension.zip
-    mode: "0755"
-    force: true
-
-- name: Install blur-my-shell
-  shell: cd /tmp && gnome-extensions install blur-my-shell.shell-extension.zip --force
-
 - name: Download media controls
   get_url:
     url: https://github.com/sakithb/media-controls/releases/download/v2.0.1/mediacontrols@cliffniff.github.com.shell-extension.zip
