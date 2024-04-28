@@ -43,3 +43,7 @@
     - name: Install and setup Dropbox
       include_tasks: tasks/dropbox.yml
       when: install_dropbox
+
+    - name: Install and setup Godot
+      include_tasks: tasks/godot.yml
+      when: install_godot

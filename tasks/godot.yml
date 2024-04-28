@@ -1,0 +1,12 @@
+---
+- name: Download godot 4 with C# support
+  get_url:
+    url: https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_linux_x86_64.zip
+    dest: /tmp/Godot_v4.2.2-stable_mono_linux_x86_64.zip
+    mode: "0755"
+    force: true
+
+- name: Extract godot
+  unarchive:
+    src: /tmp/Godot_v4.2.2-stable_mono_linux_x86_64.zip
+    dest: /opt/Godot_v4.2.2-stable_mono_linux_x86_64

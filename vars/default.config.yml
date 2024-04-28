@@ -53,3 +53,5 @@ vscode_extensions:
 install_virtualbox: false
 
 install_dropbox: true
+
+install_godot: true
