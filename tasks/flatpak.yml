@@ -14,3 +14,7 @@
 - name: Install obsidian flatpak
   shell: sudo flatpak install -y md.obsidian.Obsidian
   become: true
+
+- name: Install gnome extension manager
+  shell: sudo flatpak install -y com.mattjakeman.ExtensionManager
+  become: true

@@ -39,7 +39,3 @@
     - name: Install and setup VirtualBox
       include_tasks: tasks/virtualbox.yml
       when: install_virtualbox
-
-    - name: Install and gnome extensions
-      include_tasks: tasks/gnome.yml
-      when: install_gnome_extensions
