@@ -10,4 +10,6 @@
   yum:
     name: /tmp/nautilus-dropbox-2024.04.17-1.fc39.x86_64.rpm
     state: present
+    # Not sure where to get gpg key
+    disable_gpg_check: true
   become: true
