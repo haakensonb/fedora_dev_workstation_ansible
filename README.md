@@ -8,4 +8,4 @@ Uses Ansible to configure my personal Fedora setup
 ```ansible-playbook -v --ask-become-pass main.yml```
 
 ## Note
-This has only been tested on Fedora 39
+This has only been tested on Fedora 40
